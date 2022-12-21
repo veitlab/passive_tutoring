@@ -5,7 +5,12 @@ After=multi-user.target
 [Service]
 Type=simple
 Restart=always
-ExecStart=/usr/bin/python3 /home/pi/Desktop/passive_tutoring_nir.py
+ExecStart=/usr/bin/python3 /home/pi/git/passive_tutoring/passive_tutoring.py
 
 [Install]
 WantedBy=multi-user.target
+
+[config]
+song_directory = /home/pi/git/passive_tutoring/tutoring_songs
+tutoring_intervals = 08:00-12:00, 14:30-18:00
+log_level = INFO
